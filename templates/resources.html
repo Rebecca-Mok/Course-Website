@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resources</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container">
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources" style="color:grey">Resources</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Resources</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h2>Online Resources</h2>
+                    <ul>
+                        <li>
+                            <p> <strong><a href="index.html">Course Website</a></strong></p>
+                            <p>Course information, lecture notes, tutorial material, important 
+                                announcements, etc. will be posted on the course website. It 
+                                is your responsibility to visit it frequently.</p></li>
+                        <li>
+                            <p>Beginner Tutorial for <strong><a href="https://code.tutsplus.com/articles/sql-for-beginners--net-8200"> MySQL</a></strong></p></li>
+                        <li>
+                            <p>Email communication</p>
+                            <p>Questions regarding the course material, assignments, midterm, 
+                                etc. should be posed on the bulletin board. Questions about the 
+                                assignment which you feel you cannot formulate without revealing 
+                                your solution (should be very rare!), as well as questions and 
+                                concerns regarding your personal matters should be directed to 
+                                the instructor.</p></li>
+                        <li>
+                            <p> <strong><a href="discussion_board.html">Discussion board</a></strong></p>
+                            <p>You are encouraged to use the bulletin board to discuss the course
+                                material, pose questions on the assignments, etc. The bulletin
+                                board will be monitored by the instructor and by your TAs. Please, 
+                                be very careful not to reveal (parts of) your solution on the 
+                                bulletin board.</p></li>
+                    </ul>
+
+                    <h2>Software and documentation</h2>
+                        <p>Logging into Mathlab</p>
+                    <ol>
+                        <li>Mac OS comes with the application "terminal". Simple click on it to run. 
+                            Login to mathlab by typing
+                            <em><p>ssh utorid@mathlab.utsc.utoronto.ca. </em> Enter you password</p></li>
+                        <li>Windows - you will need a SSH client. <strong><a href="https://www.putty.org/">PuTTY</a></strong> is a good free one. You can download and install here: PuTTY. Use the same command as above to login to mathlab:
+                            <em><p>ssh utorid@mathlab.utsc.utoronto.ca.</em> </p></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer class = "footer">
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</p>
+        </footer>
+    </div>
+    
+</html>

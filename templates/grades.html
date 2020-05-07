@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Grades</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+		<link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+   </head>
+
+	<body>
+		<div id = "main-container"> 
+			<nav id = "navbar">
+				<div class = "containers">
+					<ul>
+						<li><a href = "/home" >Home</a></li>
+						<li><a href = "/grades" style="color:grey">Grades</a></li>
+						<li><a href = "/calendar">Calendar</a></li>
+						<li><a href = "/news">News</a></li>
+						<li><a href = "/discussion_board">Discussion Board</a></li>
+						<li><a href = "/lectures">Lectures</a></li>
+						<li><a href = "/labs">Labs</a></li>
+						<li><a href = "/assignments">Assignments</a></li>
+						<li><a href = "/tests">Tests</a></li>
+						<li><a href = "/resources">Resourses</a></li>
+						<li><a href = "/feedback">Feedback</a></li>
+						<li><a href = "/login">| Login</a></li>
+						<li><a href = "/logout">Logout</a></li>
+						<li><a href = "#" onclick="register()">Register</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<header id = "main-header">
+				<div class = "main_container">
+					<a href = "/static/university-of-toronto-vector-logo.png"><br>
+						<img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+					<h1>CSCB20 - Grades</h1>
+				</div>
+			</header>
+
+			<div class = "container">
+				<div class = "box-2">
+					<input type="button" value= "Grades" onclick="showGrades()"/> 
+					<input type="button" value= "Remark Requests" onclick="showDiv()"/> 
+					{% for post in data %}
+		<!---------------------------------------------- STUDENTS PAGE ---------------------------------------------->
+						{% if post.position == 'student' %}
+							<div id="class-grades"  style="display:block;">
+						
+								<h1>Grades for {{post.username}}</h1>
+
+							<!-- Header for table-->
+								<div class="header">
+									<div class="assign">
+										<h3>Assignment</h3>
+									</div>
+									<div class="weight">
+										<h3>Weight</h3>
+									</div>
+									<div class="grades">
+										<h3>Grade</h3>
+									</div> 
+								</div>
+								
+							<!-- Values for table -->
+								<div class="row1">
+									<div class="assign">
+										<p>Quiz 1</p>
+									</div>
+									<div class="weight">
+										<p>10%</p>
+									</div>
+									<div class="grades">
+										<p>{{post.quiz1}}</p>
+									</div>
+								</div>
+								<div class="row1">
+									<div class="assign">
+										<p>Quiz 2</p>
+									</div>
+									<div class="weight">
+										<p>10%</p>
+									</div>
+									<div class="grades">
+										<p>{{post.quiz2}}</p>
+									</div>
+								</div>
+								<div class="row1">
+									<div class="assign">
+										<p>Quiz 3</p>
+									</div>
+									<div class="weight">
+										<p>10%</p>
+									</div>
+									<div class="grades">
+										<p>{{post.quiz3}}</p>
+									</div>
+								</div>
+								<div class="row1">
+									<div class="assign">
+										<p>Midterm Exam</p>
+									</div>
+									<div class="weight">
+										<p>30%</p>
+									</div>
+									<div class="grades">
+										<p>{{post.midtermexam}}</p>
+									</div>
+								</div>
+
+								<div class="row1">
+									<div class="assign">
+										<p>Final Exam</p>
+									</div>
+									<div class="weight">
+										<p>40%</p>
+									</div>
+									<div class="grades">
+										<p>{{post.finalexam}}</p>
+									</div>
+								</div>
+							</div>	
+						<!----- REQUESTING A REMARK ---->
+							<div id="requests"  style="display:none;">
+								<h1>Remark Request</h1>
+								<p>To request a remark, please fill in the form below and click submit. The request will be sent to the instructor.</p>
+								<div class="request">
+									<form method="post" action="/grades" onsubmit="return added()">
+										<label>Select the assignment you wish for a remark</label><br>
+										<select name="assignment" id="assignment">
+											<option value="quiz1">Quiz 1</option>
+											<option value="quiz2">Quiz 2</option>
+											<option value="quiz3">Quiz 3</option>
+											<option value="midtermexam ">Midterm Exam</option>
+											<option value="finalexam">Final Exam</option>
+										</select><br>
+										<label>Enter your instructor's name</label><br>
+											<input type="text" name="instructor"></input><br>
+										<label>Enter any additional comments/ explanation you wish to provide for the instructor.</label><br>
+											<textarea name = "comments" rows="5" cols="30"></textarea><br>
+										<input type="submit">
+									</form>
+								</div>
+							</div>
+
+		<!---------------------------------------------- TEACHER'S PAGE ---------------------------------------------->
+						{% else %}
+							<div id="class-grades"  style="display:block;">
+								<h2>Student's marks in {{post.username}}'s class</h2>
+								<p>The following table shows all the student's marks</p>
+								<p>To update marks, fill in the box to the left of the student's name and then click submit</p>
+								
+							<!-- Heading for table-->
+								<div class="header">
+									<div class="lab-week">
+										<h3></h3>
+									</div>
+									<div class="lab-week">
+										<h3>Student</h3>
+									</div>
+									<div class="lab-week">
+										<h3>Quiz 1</h3>
+									</div>
+									<div class="lab-week">
+										<h3>Quiz 2</h3>
+									</div> 
+									<div class="lab-week">
+										<h3>Quiz 3</h3>
+									</div> 
+									<div class="lab-week">
+										<h3>Midterm</h3>
+									</div> 
+									<div class="lab-week">
+										<h3>Final</h3>
+									</div> 
+								</div>
+
+							<!-- Table to display marks -->
+								{% for post2 in data2 %}
+									{% if post2.position == 'student' %}
+
+										<div class="row1">
+										<!-- Edit Mark area -->
+											<div class="lab-week">
+												<form method="post" action="/editmark">
+													<input type="hidden" name="username" value={{post2.username}}></input>
+														<select name="assignment" id="assignment">
+															<option selected disabled>Choose one*</option>
+															<option value="quiz1">Quiz 1</option>
+															<option value="quiz2">Quiz 2</option>
+															<option value="quiz3">Quiz 3</option>
+															<option value="midtermexam">Midterm Exam</option>
+															<option value="finalexam">Final Exam</option>
+														</select><br>
+														<input type="text" name="mark" placeholder="New Mark" size="18"></input><br>
+													<input type="submit">
+												</form>
+											</div>
+											
+											<div class="lab-week">
+												<p>{{post2.username}}</p>
+											</div>
+										<!-- Quiz 1 -->
+											<div class="lab-week">
+												<p>{{post2.quiz1}}</p>
+											</div>
+										<!-- Quiz 2 -->
+											<div class="lab-week">
+												<p>{{post2.quiz2}}</a></p>
+											</div>
+										<!-- Quiz 3 -->
+											<div class="lab-week">
+												<p>{{post2.quiz3}}</p>
+											</div>
+										<!-- Midterm -->
+											<div class="lab-week">
+												<p>{{post2.midtermexam}}</p>
+											</div>
+										<!-- Final -->
+											<div class="lab-week">
+												<p>{{post2.finalexam}}</p>
+											</div>
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+							
+
+						<!-- MARK REQUESTS DISPLAY -->
+							<div id="requests"  style="display:none;">
+								<h2>Remark Requests</h2>
+								<p>The following shows all the remark requests</p>
+								
+								<div class="header">
+									<div class="lab-week">
+										<h3>Student</h3>
+									</div>
+									<div class="lab-week">
+										<h3>Instructor</h3>
+									</div>
+									<div class="lab-week">
+										<h3>Assignment</h3>
+									</div>
+									<div class="lecture">
+										<h3>Comments</h3>
+									</div> 
+									<div class="lab-week">
+										<h3>Date</h3>
+									</div> 
+								</div>
+								{% for post3 in data3 %}
+										<div class="row1">
+											<div class="lab-week">
+												<p>{{post3.student}}</p>
+											</div>
+											<div class="lab-week">
+												<p>{{post3.instructor}}</p>
+											</div>
+											<div class="lab-week">
+												<p>{{post3.assignment}}</p>
+											</div>
+											<div class="lecture">
+												<p>{{post3.comments}}</p>
+											</div>
+											<div class="lab-week">
+												<p>{{post3.date}} <br>at {{post3.time}}</p>
+											</div>
+										</div>
+								{% endfor %}
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<div class="main-footer">
+		<footer>
+			<p>Posted by: Rebecca Mok</p>
+			<p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+		</footer>
+	</div>
+</html>

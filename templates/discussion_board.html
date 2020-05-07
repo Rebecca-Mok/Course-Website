@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Discussion Board</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container">
+            <nav id = "navbar" >
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board" style="color:grey">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Discussion Board</h1>
+                </div>
+            </header>
+
+            <div class = "container" >
+                <div class = "box-2">
+                    <p> Course discussion board will be on <strong><a href="https://piazza.com/account/login">Piazza</a></strong></p>    
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer class = "footer">
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</p>
+        </footer>
+    </div>
+    
+</html>
+
+        

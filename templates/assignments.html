@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignments</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+        <link rel="shortcut icon" href="#" />
+    </head>
+    
+    <body>
+        <div id = "main-container">
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments" style="color:grey">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Assignments</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h2>Overview</h2>
+                    <p> Here are the assignment and exercise topics, weights, and due dates. 
+                        I will be posting the exercise and assignment handouts here. All 
+                        exercies and assignments will be submitted on <strong><a href="https://markus.utsc.utoronto.ca/csca08f19">Markus</a></strong>
+                    </p>
+                    <h2>Assignments</h2>
+
+                    <!-- Heading -->
+                    <div class="header">
+                        <div class="assignment">
+                            <h3>Assignments</h3>
+                        </div>
+                        <div class="handout">
+                            <h3>Handout</h3>
+                        </div>
+                        <div class="duedate">
+                            <h3>Due</h3>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                        </div> 
+                    </div>
+        
+                    <!-- Table -->
+                    <div class="row1">
+                        <div class="assignment">
+                            <p>Relational Algebra and MySQL (15%)</p>
+                        </div>
+                        <div class="handout">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        </div>
+                        <div class="duedate">
+                            <p>Part 1: Wednesday Feb 1 (11:59pm)</p>
+                            <p>Part 2: Friday Feb 17 (11:59pm)</p>
+                            <p>Bonus 5%: hand in Part 2by Saturday Feb 11 (11:59)</p>  
+                        </div>
+                        <div class="solutions">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Part1</a></strong></p>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row1">
+                        <div class="assignment">
+                            <p>HTML, CSS, PHP (15%)</p>
+                        </div>
+                        <div class="handout">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">a2.zip</a></strong></p>
+                        </div>
+                        <div class="duedate">
+                            
+                            <p>Part 1 (Worth 50%): Friday March 10 (11:59pm)</p>
+                            <p>Part 2 (Worth 50%): Friday March 19 (11:59pm)</p>
+                        
+                        </div>
+                        <div class="solutions">
+                            <p>None</p>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row1">
+                        <div class="assignment">
+                            <p>Web Application and Database (15%)</p>
+                        </div>
+                        <div class="handout">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Marking Scheme</a></strong></p>
+                        </div>
+                        <div class="duedate">
+                            <p>Friday March 31 (11:59pm)</p>
+                        </div>
+                        <div class="solutions">
+                            <p>None</p>
+                        </div>
+        
+                    </div>
+                    <br>
+                    <h2>FAQ - Assignment 1</h2>
+                    <p>
+                        Q: If the mysql portion asks for a director or actor without 
+                        specifying which attributes, what should I return?</p>
+                    <p>
+                        A: Retun the first name, last name.</p>
+                </div>
+            </div>
+        </div>    
+    </body>
+
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</p>
+        </footer>
+    </div>
+
+</html>

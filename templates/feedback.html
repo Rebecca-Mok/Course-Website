@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSCB20 - Introduction to Databases and Web Applications</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container"> 
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home" >Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback" style="color:grey">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Feedback</h1>
+                </div>
+            </header>
+
+            <div class = "container" style = "min-height: 65vh;">
+                <div class = "box-2">
+                    {% for post in data %}
+                        <!-- STUDENT'S PAGE -->
+                        {% if post.position == 'student' %}
+
+                            <!-- Anonymous Feedback Requests -->
+                            <h1>Feedback to instructor</h1>
+                            <p>To give an anonymous feedback, please fill in the following form</p>
+                            <div class="feedback">
+                                <form method="post" action="/feedback" onsubmit="return added()">
+                                    <label>Instructor's Name</label><br>
+                                        <input type="text" name="instructor"></input><br>
+
+                                    <label>Topic</label><br>
+                                        <input type="text" name="subject"></input><br>
+
+                                    <label>Enter your feedback to the instructor</label><br>
+                                        <textarea name = "feedback" rows="5" cols="30"></textarea><br>
+                                    <input type="submit">
+                                </form>
+                            </div>
+
+                        <!-- TEACHER'S PAGE -->
+                        {% else %}
+                            <h1>Feedback for {{post.username}}'s class</h1>
+                            <p>The following table shows all the feedbacks the students has given for your class </p>
+                            
+                            <!-- Heading for table-->
+                            {% for post2 in data2 %}
+                                {% if post2.instructor == post.username %}
+                                    <div class = "announcement-box">
+                                        <h2>{{post2.subject}}</h2>
+                                        <sub>{{post2.date}} at {{post2.time}}</sub>
+                                            <p>{{post2.feedback}}</p>
+                                        <!-- <hr> -->
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+        </footer>
+    </div>
+
+</html>

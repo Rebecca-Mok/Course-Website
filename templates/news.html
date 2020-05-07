@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container"> 
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news" style="color:grey">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - News</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "announcement-box">
+                    <h2>Plans Moving forward</h2>
+                    <sub>Mar 15, 2020 at 9:44am</sub>
+                        <p>Hello folks, <br> Here is the plan moving forward</p>
+                        <ul>
+                            <li>Lectures: I will be recording my lectures and making them available on YouTube for now. 
+                                I am also exploring another medium such as Zoom for this; however, I will continue to use 
+                                YouTube for now. These lectures will be pre-recorded and will be available by the end of 
+                                Monday of each week.</li>
+                            <li>Office Hours: I am planning on holding my office hours on Zoom for now. I will make my 
+                                Zoom URL available by tomorrow morning after I have got this setup. Please make sure to 
+                                download the Zoom client from here: https://zoom.us</li>
+                            <li>Tutorials: There will be no tutorials conducted on the university campus. However, for 
+                                this week i.e., the week of 16th March, my TAs will be holding online office hours instead. 
+                                I am hoping this gives them and you an opportunity to try out the online meeting software 
+                                that they have planned, and we will know by the end of the week what works and what does not 
+                                work and what is the best course of action in the following weeks.</li>
+                            <li>Assignment 2</li>
+                            <div class = "sub-list">
+                                <ul>
+                                    <li>Assignment 2 is due tonight. This is a friendly reminder that Flask is a requirement only 
+                                        for question 1 and not for question 2 of the assignment. You are asked to submit the .py 
+                                        file (Python file) for question 1 only.</li>
+                                    <li>Also, do not use absolute pathnames when you are referring to images but instead, use 
+                                        relative path names. If you use absolute path names such as '/Users/abbas/Desktop/image1.png',
+                                        then that will only work on your computer as we do not have the above folders created on our 
+                                        computer.</li>
+                                    <ul>
+                                        <li>Do not create hyperlinks to the old website of B20. Please make sure your website is 
+                                            stand alone and all the required files are submitted allowing us to run your website. </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                    </ul>
+                <hr>
+                    <h2>Some Assignment 2 related information</h2>
+                    <sub>Mar 11, 2020 at 12:50pm</sub>
+                        <p>Folks, <br> As I get questions in office hours and via email, I thought I will share the following with everyone:</p>
+                        <ol>
+                            <li>You can use all the content such as (lecture material, name of the instructor, etc ) from here: 
+                                http://www.utsc.utoronto.ca/~bretscher/b20/Links to an external site.</li>
+                            <li>We are making a better and newer version of http://www.utsc.utoronto.ca/~bretscher/b20/Links to 
+                                an external site. website. The current offering of B20 is hosted on Quercus and is a very different 
+                                framework and hosting platform, and hence for this, I ask you to use content and details from 
+                                http://www.utsc.utoronto.ca/~bretscher/b20/Links to an external site.</li>
+                            <li>For question 1 of the assignment, if no name is passed in the URL, you are free to show any default 
+                                welcome greeting. </li>
+                            <li>Do not use JavaScript or any external CSS frameworks. All HTML and CSS must be created by you. </li>
+                            <li>Make sure to complete the honor code. </li>
+                            <li>As mentioned in the lecture, when creating your mockups, please do not in the mockup, show us your 
+                                actual website. This is incorrect. Do not also show any version of your website that uses HTML and 
+                                CSS. The most common use of mockups in software development is to create user interfaces that show 
+                                the end-user what the software will look like without having to build the software or the underlying 
+                                functionality. (Source: https://en.wikipedia.org/wiki/Mockup)</li>
+                            <li>Please refer to the assignment handout, and I have provided some links on how you can create these 
+                                mock ups. </li>
+                            <li>You will need to consider redrawing some of the mock-ups, on how your website will be displayed on 
+                                a mobile device. </li>
+                        </ol>
+                        <p>thanks, <br>abbas</p>
+                <hr>
+                    <h2>Prelecture video material for 9th March</h2>
+                    <sub>Mar 7, 2020 at 8:29pm</sub>
+                    <p>Folks, <br> I have posted the material for the lecture that is coming up on 9th March. Please make sure to 
+                        watch this video before coming to lecture on the 9th March: </p>
+                    <ol>
+                        <li>Tic Tac Toe Game in JavaScript</li>
+                        <p><a href="#">Coding Tic Tac Toe in Javascript: Part 1</a></p>
+                    </ol>
+                    <p>thanks, <br>abbas</p>
+
+                <hr>
+                    <h2>Help with installing Flask on your computer today (6th March)</h2>
+                    <sub>Mar 6, 2020 at 8:34am</sub>
+                    <p>Folks, <br> My TAs, Kevin and Dharmik, have office hours today at 10am (IC 402) and at 6pm (IC 400A).
+                        <br>Please stop by if you have any questions if you need help with installation or have any questions 
+                        on assignment 2. <br></p>
+                    <p>thanks, <br>abbas</p>
+
+                <hr>
+                    <h2>Running Flask via PyCharm</h2>
+                    <sub>Mar 2, 2020 at 1:28pm</sub>
+                    <p>Folks, <br> In lecture, I made use of command line on installing and running Flask on my computer. 
+                        Using command line can be overwhelming, if you have't used it before. So here is another approach on
+                        using Flask on your computer that may be easier. </p>
+                    <ol>
+                        <li>Install PyCharm on your computer. https://www.jetbrains.com/pycharm/
+                            <br>As a student, you have free access to the professional edition of PyCharm. 
+                        </li>
+                        <li>Once you have installed PyCharm on your computer, you can then follow the instructions here: <br>
+                            https://www.jetbrains.com/help/pycharm/creating-flask-project.html</li>
+                    </ol>
+                    <p>You will notice that in the second link, it gives you a nice step by step instructions in creating a 
+                        Flask project and writing code in PyCharm, and clicking on simple buttons to run your webserver all 
+                        from within PyCharm. </p>
+                    <p>thanks, <br>abbas</p>
+
+                </div> 
+            </div> 
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+        </footer>
+    </div>
+
+</html>

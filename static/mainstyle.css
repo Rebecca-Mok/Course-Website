@@ -1,0 +1,239 @@
+/* ---------------- GENERAL STYLES ---------------- */
+.clr{
+    clear:both;
+}
+@media(min-width:468px){
+    .edit,.row1{
+        display: flex; /*puts container side by side */
+    }
+}
+.row1 div{
+    border: 1px #ccc solid;
+    text-align: center;
+}
+.edit div{
+    border: none;
+    text-align: center;
+}
+.header{
+    display: flex;
+}
+body{
+    background-color: #f4f4f4;
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:normal;
+
+    line-height:1.6em;
+}
+.header div{
+    line-height: 0.3;
+    text-align: center;
+}
+.box-2{
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* ---- CONTAINERS ---- */
+.containers{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+
+/* ---- NAVIGATOR ---- */
+#main-header h1{
+    line-height:1.3em;
+    padding: 10px;
+}
+#navbar {
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0em;
+    width: 100%;
+}
+#navbar ul{
+    padding: 10;
+    list-style: none;
+}
+#navbar li{
+    display: inline;
+}
+#navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+#navbar a:hover{
+    color: grey;
+}
+.current li{
+    color: grey;
+}
+
+/* ---- BUTTONS ---- */
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: grey;
+}
+a:active{
+    color: green;
+}
+.button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+
+/* ---- FOOTER ---- */
+html, body {
+    height: 98%;
+}
+#main-container{
+    min-height: 100%;
+}
+.container{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    height: 100px;
+    margin-top: -107px;
+    clear: both;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+.main-footer p{
+    padding: 10px;
+    line-height: 0em;
+    text-align: center;
+}
+ 
+
+/* ---------------- SPECIFIC STYLES PER PAGE ---------------- */
+/* ---- HOME ---- */
+.instructor li{
+    margin-left: 10px;
+    list-style: none;
+}
+.instructor h2{
+   line-height: 0%;
+}
+
+/* ---- GRADES ---- */
+.assign{
+    width: 25%;
+}
+.weight{
+    width: 15%;
+}
+.grades{
+    width: 15%;
+}
+
+/* ---- CALENDAR ---- */
+.calendar-box{
+    width: 14%;
+    height: 130px;
+}
+.weekday{
+    width: 14%;;
+}
+.calendar li{
+    list-style: none;
+}
+
+/* ---- NEWS ---- */
+.announcement-box {
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+.announcement-box h2{
+    margin-bottom: 0;
+}
+.announcement-box p{
+    margin-left: 50px;
+}
+.announcement-box ul{
+    margin-left: 50px;
+}
+.announcement-box ol{
+    margin-left: 50px;    
+}
+.sub-list ul{
+    margin-left: 0px;
+}
+
+/* ---- LECTURE ---- */
+.week{
+    width: 10%;
+}
+.topic{
+    width: 25%;
+}
+.lecture{
+    width: 40%;
+}
+.lecture p{
+    line-height: 100%;
+    text-align: center;
+}
+.class{ 
+    width: 25%;
+}
+
+/* ---- LABS ---- */
+.lab-week{
+    width: 14%;
+}
+.lab-lab{
+    width: 60%;
+}
+.lab-solutions{ 
+    width: 26%;
+}
+
+/* ---- ASSIGNMENTS ---- */
+.assignment{
+    width: 15%;
+}
+.handout{
+    width: 20%;
+    line-height: .5;
+}
+.handout p{
+    line-height: 1.5em;
+}
+.duedate{
+    width: 45%;
+    line-height: .5;
+}
+.duedate p{
+    line-height: 1.5em;
+}
+.solutions{ 
+    width: 20%;
+    line-height: .5;
+}
+
+
+
+
+

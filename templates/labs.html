@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Labs</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container"> 
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs" style="color:grey">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Labs</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h2>Tutorial Sections</h2>
+                    <p>Please go to the tutorial section that you are signed up for on ROSI</p>
+                    <h2>Tutorial Exercises</h2>
+                    <p>This section contains the tutorial exercises.</p>
+                    <p>Tutorials are held every week. The first tutorial week is week 2. 
+                        Please make use of this valuable resource!</p>
+                        <br>
+                
+                    <div class="header">
+                        <div class="lab-week">
+                            <h3>Week</h3>
+                        </div>
+                        <div class="lab-lab">
+                            <h3>Lab</h3>
+                        </div>
+                        <div class="lab-solutions">
+                            <h3>Solutions</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>2</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Python, Command line</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>3</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p>  </p>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>4</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">univeristy.sql</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Query Solutions</a></strong></p>
+                        </div>
+
+                    </div>
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>5</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        
+                        </div>
+                        <div class="lab-solutions">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Solutions</a></strong></p>
+                        </div>
+
+                    </div>
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>6</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                    
+                        </div>
+                        <div class="lab-solutions">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Solutions</a></strong></p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>7</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>8</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p>  </p>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>9</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Handout</a></strong></p>
+                        </div>
+                        <div class="lab-solutions">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="lab-week">
+                            <p>10</p>
+                        </div>
+                        <div class="lab-lab">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf"> W3 tutorial </a></strong>Work through the tutorial for jQuery up until jQuery Remove</p>
+                
+                        </div>
+                        <div class="lab-solutions">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Query Solutions</a></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+        </footer>
+    </div>
+ 
+</html>

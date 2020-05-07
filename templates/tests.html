@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tests</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+
+    <body>
+        <div id = "main-container">
+            <nav id = "navbar" >
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests" style="color:grey">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href ="/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Tests</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h2>Midterm</h2>
+                    <p>There will be one midterm. The midterm will be 75min in length. 
+                        You should go to either HW215 or HW216 depending on your last 
+                        name as shown here.
+                    </p>
+                    <p>Preparing for the midterm</p>
+                    <ul>
+                        <li>Understand all parts of A1</li>
+                        <li>The midterm will cover everything on databases that we did 
+                            from the start until part way through the week 6 lecture.</li>
+                    </ul>
+                    <p>Once you have done some preparation, you can practice on a previous 
+                        midterm: <strong><a href="/static/testA.pdf">Test</a></strong></p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer class = "footer">
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</p>
+        </footer>
+    </div>
+
+</html>

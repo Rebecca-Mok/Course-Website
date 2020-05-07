@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSCB20 - Introduction to Databases and Web Applications</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+     </head>
+
+    <body>
+        <div id = "main-container"> 
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home" style="color:grey">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                        <h1>CSCB20 - Introduction to Databases and Web Applications</h1>
+                </div>
+            </header>
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h1>Welcome {{data}} to CSCB20</h1>
+            
+                    <h2>Course Description</h2>
+                    <p> Practical introduction to databases and Web app development. 
+                        Databases: terminology and applications; creating, querying 
+                        and updating databases; the entity-relationship model for 
+                        database design. Web documents and applications: static and i
+                        nteractive documents; Web servers and dynamic server-generated 
+                        content; Web application development and interface with 
+                        databases.
+                    </p>
+                    <p>Prerequisite: Some experience with programming in an imperative 
+                        language such as Python, Java or C.
+                    </p>
+                    <p>Exclusion: This course may not be taken after - or concurrently 
+                        with - any C- or D-level CSC course.
+                    </p>
+
+                    <a class = "button" href="/static/syllabus.pdf">Syllabus</a>
+                    <br><br><hr>
+                    <a href = "/static/Anna_Bretscher.jpg"><br>
+                        <img src = "/static/Anna_Bretscher.jpg" align="left" hspace="30" alt = "My Sample Image" width = "150"></a>
+            
+                    <div class = "instructor">
+                        <h2>Instructor</h2>
+                        <ul>
+                            <li><em><strong><a href="https://www.utsc.utoronto.ca/cms/anna-bretscher">Dr. Anna Bretscher</a></em></strong></li>
+                            <li>Email: bretscher@utsc.utrotonto.ca</li>
+                            <li>Office: IC 493</li>
+                            <li>Phone: (416) 208-4745</li>
+                            <li>Lecture Mondays 9:15 - 11:00 in <em><strong><a href="https://www.utsc.utoronto.ca/registrar/hw216">HW 216</a></strong></em></li>
+                            <li>Office Hours W 11:00 - 12:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "clr"></div>
+            </div> 
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+        </footer>
+    </div>
+</html>

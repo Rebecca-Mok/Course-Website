@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lectures</title>
+        <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='mainstyle.css') }}">
+        <script src="{{url_for('static', filename='new.js')}}"></script>
+    </head>
+    
+    <body>
+        <div id = "main-container"> 
+            <nav id = "navbar">
+                <div class = "containers">
+                    <ul>
+                        <li><a href = "/home">Home</a></li>
+                        <li><a href = "/grades">Grades</a></li>
+                        <li><a href = "/calendar">Calendar</a></li>
+                        <li><a href = "/news">News</a></li>
+                        <li><a href = "/discussion_board">Discussion Board</a></li>
+                        <li><a href = "/lectures" style="color:grey">Lectures</a></li>
+                        <li><a href = "/labs">Labs</a></li>
+                        <li><a href = "/assignments">Assignments</a></li>
+                        <li><a href = "/tests">Tests</a></li>
+                        <li><a href = "/resources">Resourses</a></li>
+                        <li><a href = "/feedback">Feedback</a></li>
+                        <li><a href = "/login">| Login</a></li>
+                        <li><a href = "/logout">Logout</a></li>
+                        <li><a href = "#" onclick="register()">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header id = "main-header">
+                <div class = "main_container">
+                    <a href = "/static/university-of-toronto-vector-logo.png"><br>
+                        <img src = "/static/university-of-toronto-vector-logo.png" align="left" alt = "My Sample Image" width = "100"></a>
+                    <h1>CSCB20 - Lectures</h1>
+                </div>
+            </header>
+            
+
+            <div class = "container">
+                <div class = "box-2">
+                    <h2>Lecture Schedule</h2>
+                    <p>Please print and bring these notes/worksheets to class</p>
+                    
+                    <!-- Heading -->
+                    <div class="header">
+                        <div class="week">
+                            <h3>Week</h3>
+                        </div>
+                        <div class="topic">
+                            <h3>Topic</h3>
+                        </div>
+                        <div class="lecture">
+                            <h3>Lecture Material</h3>
+                        </div>
+                        <div class="class">
+                            <h3>In Class</h3>
+                        </div> 
+                    </div>
+
+                    <!-- Table -->
+                    <div class="row1">
+                        <div class="week">
+                            <p>1</p>
+                        </div>
+                        <div class="topic">
+                            <p>Introduction, Databases background</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (B&W)</a></strong></p>
+                    
+                        </div>
+                        <div class="class">
+                            <p>Part1</p>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row1">
+                        <div class="week">
+                            <p>3</p>
+                        </div>
+                        <div class="topic">
+                            <p>Schema Diagrams, Relational Algebra</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Worksheet</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Worksheet Solutions</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row1">
+                        <div class="week">
+                            <p>4</p>
+                        </div>
+                        <div class="topic">
+                            <p>SQL and MySQL</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (B&W)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">MySQL Worksheet </a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p>In Class MySQL</p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>5</p>
+                        </div>
+                        <div class="topic">
+                            <p>MySQL Queries, Creating and Editing Tables</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (B&W)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf"> More MySQL Worksheet </a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf"> Solutions </a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p>In Class MySQL</p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>6</p>
+                        </div>
+                        <div class="topic">
+                            <p>MySQL Outer Joins, Views, NULL, string functions, HTML</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">HTMLPower Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">MySQL Views Worksheet </a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf"> Solutions </a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>7</p>
+                        </div>
+                        <div class="topic">
+                            <p>HTML, CSS</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf"> CSS Point (colour)</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>8</p>
+                        </div>
+                        <div class="topic">
+                            <p>PHP</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">PHP Power Point (colour)</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>9</p>
+                        </div>
+                        <div class="topic">
+                            <p>PHP and SQL</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p>Empty starter file: query.php <br>To lookat the text for this file, download this php_query.text</p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>10</p>
+                        </div>
+                        <div class="topic">
+                            <p>JavaScript and jQuery</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">jQuery Power Point (colour)</a></strong></p>
+
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>11</p>
+                        </div>
+                        <div class="topic">
+                            <p>jQuery, AJAX, JSON</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (colour)</a></strong></p>
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">Power Point (B&W)</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="row1">
+                        <div class="week">
+                            <p>12</p>
+                        </div>
+                        <div class="topic">
+                            <p>Last Year's final</p>
+                        </div>
+                        <div class="lecture">
+                            <p><strong><a href="/static/Powerpoints-Handouts-dummy-file.pdf">W16 Final</a></strong></p>
+                        </div>
+                        <div class="class">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="main-footer">
+        <footer>
+            <p>Posted by: Rebecca Mok</p>
+            <p>Contact information: mok.chui@mail.utoronto.ca</a></p>
+        </footer>
+    </div>
+</html>
+        
