@@ -1,5 +1,4 @@
 # Course-Website
-# Course-Website
 ## Description
 Designed and developed responsive website using HTML, CSS, and Javascript for frontend and Python for backend. Also used jQuery, SQL, and Flask
 
@@ -43,4 +42,19 @@ Modules used for this website
   * Students can submit feedbacks to specific instructors anonymously
   * Instructors can only view feedbacks specifically directed to them
   
-## Pages
+## Preview of some pages
+Login Page
+![](screenshots/Login.png)
+Home Page
+![](screenshots/Home.png)
+Grades <br>
+Student's View
+![](screenshots/Grades-Student.png)
+Instructor's View
+![](screenshots/Grades-Instructor.png)
+Remark Requests <br>
+![](screenshots/Remark-Student.png)
+Feedback <br>
+![](screenshots/Feedback-Student.png)
+Register
+![](screenshots/Register.png)
