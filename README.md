@@ -33,6 +33,7 @@ Modules used for this website
   * Verifies the username does not already exist 
   * Any errors will be prompted with a message
 * Grades
+  * Can update and edit grades
   * Can toggle between viewing grades or viewing regrade request
   * Students can view their grades and request a grade remark 
   * Instructors can view all student's grades
