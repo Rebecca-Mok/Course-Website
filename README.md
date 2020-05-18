@@ -1,4 +1,10 @@
 # Course-Website
+## Goals
+* Implement user authentication and confirmation
+* Session management/ security
+* Communicate in real time between the frontend and backend
+* Utlized databases to store and manage data
+
 ## Description
 Designed and developed responsive website using HTML, CSS, and Javascript for frontend and Python for backend. Also used jQuery, SQL, and Flask
 
