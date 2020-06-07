@@ -8,6 +8,14 @@
 ## Description
 Designed and developed responsive website using HTML, CSS, and Javascript for frontend and Python for backend. Also used jQuery, SQL, and Flask
 
+Login example:
+Student
+* username: ok1
+* password: ok1
+Instructor
+* username: abbas123
+* password: abbas123
+
 Modules used for this website
 * flask
 * flask_sqlalchemy
