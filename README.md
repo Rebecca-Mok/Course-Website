@@ -36,6 +36,27 @@ Modules used for this website
   * syllabus.pdf is used as a dummy pdf for all pdf files
   * Powerpoints-Handouts-dummy-file.pdf is used as a dummy pdf for all lecture slides
   
+## Running the file
+* Download and unzip the folder
+* cd into the folder
+* If you don't have flask and flask_sqlalchemy installed already then run the following codes to install them
+```
+pip3 install flask
+```
+```
+pip3 install flask_sqlalchemy
+```
+* Enter the following code to make sure you are running with python3
+```
+python --version
+```
+* Once you have python 3, run the following command
+```
+python app.py
+```
+* Now, go to your browser and enter http://0.0.0.0:5000/login into your url.
+* You should now see the course website :)
+
 ## Main Functions Implemented
 * Two different user types (student and instructor)
 * Login
